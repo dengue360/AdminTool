@@ -25,12 +25,13 @@ public class DataSINAN {
     private String compleLogra;
     private String cep;
     private String codZona;
-    private Integer idade;
+    private String idade;
     private Integer ano;
-    private Integer numRua;
+    private String numRua;
     private Date notificacaoDT;
     private Date encerramentoDT;
     private Date nascimentoDT;
+    private Date obitoDT;
 
     public DataSINAN() {
     }
@@ -123,11 +124,11 @@ public class DataSINAN {
         this.codZona = codZona;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
@@ -139,11 +140,11 @@ public class DataSINAN {
         this.ano = ano;
     }
 
-    public Integer getNumRua() {
+    public String getNumRua() {
         return numRua;
     }
 
-    public void setNumRua(Integer numRua) {
+    public void setNumRua(String numRua) {
         this.numRua = numRua;
     }
 
@@ -170,7 +171,13 @@ public class DataSINAN {
     public void setNascimentoDT(Date nascimentoDT) {
         this.nascimentoDT = nascimentoDT;
     }
-    
-    
-   
+
+    public Date getObitoDT() {
+        return obitoDT;
+    }
+
+    public void setObitoDT(Date obitoDT) {
+        this.obitoDT = obitoDT;
+    }
+  
 }
