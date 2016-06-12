@@ -30,9 +30,6 @@ public enum SINANFields {
     NU_CEP("CEP","Numero do CEP do municipio de residencia"),
     CS_ZONA("Zona","Zona de residência do paciente por ocasião da notificação");
     
-    
-    
-    
     private String description;
     private String name;
 
