@@ -97,6 +97,9 @@ public class ConverterDBFToObject {
                 case NU_NUMERO:
                     d.setNumRua(String.valueOf(rowObjects[i]));
                     break;
+                case CLASSI_FIN:
+                    d.setClassificacao(String.valueOf(rowObjects[i]));
+                    break;
                 default:
                     break;
             }

@@ -30,9 +30,10 @@ public enum SINANFields {
     NU_CEP("CEP","Numero do CEP do municipio de residencia"),
     CS_ZONA("Zona","Zona de residência do paciente por ocasião da notificação"),
     DT_OBITO("Data do Obito", "Data do obito, caso tenha ocorrido"),
+    CLASSI_FIN("Classificação do caso","Indica se o caso foi confirmado, descartado ou é grave"),
     
     COPAISINF   ("",""),    COMUNINF    ("",""),    CODISINF    ("",""),    CO_BAINF    ("",""),	
-    CLASSI_FIN  ("",""),    CRITERIO    ("",""),    DOENCA_TRA  ("",""),    CLINC_CHIK  ("",""),
+        CRITERIO    ("",""),    DOENCA_TRA  ("",""),    CLINC_CHIK  ("",""),
     EVOLUCAO    ("",""),    ALRM_HIPOT  ("",""),    ALRM_PLAQ   ("",""),    ALRM_VOM    ("",""),
     ALRM_SANG   ("",""),    ALRM_HEMAT  ("",""),    ALRM_ABDOM  ("",""),    ALRM_LETAR  ("",""),
     ALRM_HEPAT  ("",""),    ALRM_LIQ    ("",""),    DT_ALRM     ("",""),    GRAV_PULSO  ("",""),

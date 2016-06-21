@@ -28,6 +28,7 @@ public class DataSINAN {
     private String idade;
     private Integer ano;
     private String numRua;
+    private String classificacao;
     private Date notificacaoDT;
     private Date encerramentoDT;
     private Date nascimentoDT;
@@ -179,5 +180,13 @@ public class DataSINAN {
     public void setObitoDT(Date obitoDT) {
         this.obitoDT = obitoDT;
     }
-  
+
+    public String getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(String classificacao) {
+        this.classificacao = classificacao;
+    }
+    
 }

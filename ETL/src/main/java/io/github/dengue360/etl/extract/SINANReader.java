@@ -30,9 +30,10 @@ public class SINANReader {
         this.filePath = path;
         InputStream inputStream = new FileInputStream(filePath); // take dbf file as program argument
         DBFReader reader = new DBFReader(inputStream);
-//        inputStream.close();
         ConverterDBFToObject conv = new ConverterDBFToObject();
-        return conv.getResultList(reader);
+        List<DataSINAN> list = conv.getResultList(reader);
+        inputStream.close();
+        return list;
     }
     
     public String getFilePath() {
