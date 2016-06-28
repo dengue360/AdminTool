@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  *
  * @author Rafael
  */
-public class Loader {
+public class LoaderTest {
     public static void main(String[] args) {
         SINANReader r = new SINANReader();
         try {
@@ -27,7 +27,7 @@ public class Loader {
                 System.out.println(d.getLogradouro() + " - " + d.getClassificacao());
             }
         } catch (Exception ex) {
-            Logger.getLogger(Loader.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LoaderTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }

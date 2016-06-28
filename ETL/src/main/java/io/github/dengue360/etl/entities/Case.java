@@ -15,17 +15,18 @@ import javax.persistence.Id;
  * @author Rafael
  */
 @Entity
-public class Time implements Serializable{
-    @Id
-    private Long id;
+public class Case implements Serializable{
     
+    //Id temporario
+    @Id
+    private Long ID;
 
-    public Long getId() {
-        return id;
+    public Long getID() {
+        return ID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setID(Long ID) {
+        this.ID = ID;
     }
     
 }

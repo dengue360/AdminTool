@@ -5,6 +5,7 @@
     <class>io.github.dengue360.etl.entities.Lacation</class>
     <class>io.github.dengue360.etl.entities.Person</class>
     <class>io.github.dengue360.etl.entities.Time</class>
+    <class>io.github.dengue360.etl.entities.Case</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5435/dengue360-DW"/>
       <property name="javax.persistence.jdbc.password" value="123456"/>

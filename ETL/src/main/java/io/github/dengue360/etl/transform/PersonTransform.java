@@ -10,6 +10,6 @@ package io.github.dengue360.etl.transform;
  *
  * @author Rafael
  */
-public class NewClass {
+public class PersonTransform {
     
 }
