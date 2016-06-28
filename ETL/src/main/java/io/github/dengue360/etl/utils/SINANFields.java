@@ -33,7 +33,7 @@ public enum SINANFields {
     CLASSI_FIN("Classificação do caso","Indica se o caso foi confirmado, descartado ou é grave"),
     
     COPAISINF   ("",""),    COMUNINF    ("",""),    CODISINF    ("",""),    CO_BAINF    ("",""),	
-        CRITERIO    ("",""),    DOENCA_TRA  ("",""),    CLINC_CHIK  ("",""),
+    COUFINF     ("",""),    CRITERIO    ("",""),    DOENCA_TRA  ("",""),    CLINC_CHIK  ("",""),
     EVOLUCAO    ("",""),    ALRM_HIPOT  ("",""),    ALRM_PLAQ   ("",""),    ALRM_VOM    ("",""),
     ALRM_SANG   ("",""),    ALRM_HEMAT  ("",""),    ALRM_ABDOM  ("",""),    ALRM_LETAR  ("",""),
     ALRM_HEPAT  ("",""),    ALRM_LIQ    ("",""),    DT_ALRM     ("",""),    GRAV_PULSO  ("",""),
@@ -66,7 +66,7 @@ public enum SINANFields {
     RESUL_VI_N	("",""),    DT_PCR	("",""),    RESUL_PCR_	("",""),    SOROTIPO	("",""),    
     HISTOPA_N	("",""),    IMUNOH_N	("",""),    HOSPITALIZ	("",""),    DT_INTERNA	("",""),    
     UF	("",""),    MUNICIPIO	("",""),    HOSPITAL	("",""),    DDD_HOSP	("",""),    
-    TEL_HOSP	("",""),    TPAUTOCTO   ("",""),   COUFINF     ("",""),     NOBAIINF    ("","");
+    TEL_HOSP	("",""),    TPAUTOCTO   ("",""),     NOBAIINF    ("","");
     
     private String description;
     private String name;

@@ -8,6 +8,7 @@ package io.github.dengue360.etl;
 
 import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.extract.SINANReader;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,7 +24,7 @@ public class Loader {
             List<DataSINAN> list =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
             
             for (DataSINAN d : list) {
-                System.out.println(d.getLogradouro());
+                System.out.println(d.getLogradouro() + " - " + d.getClassificacao());
             }
         } catch (Exception ex) {
             Logger.getLogger(Loader.class.getName()).log(Level.SEVERE, null, ex);

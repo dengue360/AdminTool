@@ -29,7 +29,7 @@ public class ConverterDBFToObject {
         List<DataSINAN> list = new ArrayList();
         DataSINAN d= new DataSINAN();
         //test
-        if((rowObjects = reader.nextRecord()) != null) {
+        while((rowObjects = reader.nextRecord()) != null) {
             list.add(converter(d, rowObjects, reader));
             d = new DataSINAN();
         }
@@ -101,7 +101,7 @@ public class ConverterDBFToObject {
                     d.setClassificacao(String.valueOf(rowObjects[i]));
                     break;
                 default:
-                    break;
+                    throw new DBFException("O campo informado não existe ou foi modificado");
             }
         }
         
