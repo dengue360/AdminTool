@@ -11,5 +11,7 @@ package io.github.dengue360.etl.transform;
  * @author Rafael
  */
 public class Transformer {
-    
+    //Obtem a lista de DATASINAN proveniente da extração 
+    //Intera sobre os objetos e divide cada instancia entre as classes de 
+    //transformação especificas depois repassa os resultados obtidos para a carga    
 }

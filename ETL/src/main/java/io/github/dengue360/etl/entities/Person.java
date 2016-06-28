@@ -30,8 +30,7 @@ public class Person implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date dataNasc;
 
-    public Person(Long id, Integer idade, String sexo, String gestante, Date dataNasc) {
-        this.id = id;
+    public Person(Integer idade, String sexo, String gestante, Date dataNasc) {
         this.idade = idade;
         this.sexo = sexo;
         this.gestante = gestante;

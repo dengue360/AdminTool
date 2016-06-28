@@ -4,13 +4,12 @@
  * and open the template in the editor.
  */
 
-package io.github.dengue360.etl.load;
+package io.github.dengue360.etl;
 
 /**
- *
+ * Classe que funciona como um gatilho para a execução do processo de etl
  * @author Rafael
  */
-public class Loader { 
-//obtem as listas provenientes da transformação e faz a carga
-    //primiro das dimensões em seguida do fato e retorna o resultado.    
+public class Trigger {
+    //deve executar as ações, controlar os erros e se comunicar com a UI
 }

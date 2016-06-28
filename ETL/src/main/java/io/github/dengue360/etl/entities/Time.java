@@ -7,8 +7,11 @@
 package io.github.dengue360.etl.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -18,14 +21,93 @@ import javax.persistence.Id;
 public class Time implements Serializable{
     @Id
     private Long id;
-    
+    private String dia;
+    private String mes;
+    private String semanaEpdem;
+    private Integer ano;
+    @Temporal(TemporalType.DATE)
+    private Date noteDate;
+    @Temporal(TemporalType.DATE)
+    private Date encerrDate;
+    @Temporal(TemporalType.DATE)
+    private Date obitoDate;
 
+    public Time() {
+    }
+
+    public Time(String dia, String mes, String semanaEpdem, Integer ano, Date noteDate, Date encerrDate, Date obitoDate) {
+        this.dia = dia;
+        this.mes = mes;
+        this.semanaEpdem = semanaEpdem;
+        this.ano = ano;
+        this.noteDate = noteDate;
+        this.encerrDate = encerrDate;
+        this.obitoDate = obitoDate;
+    }
+
+    
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
+    public String getMes() {
+        return mes;
+    }
+
+    public void setMes(String mes) {
+        this.mes = mes;
+    }
+
+    public String getSemanaEpdem() {
+        return semanaEpdem;
+    }
+
+    public void setSemanaEpdem(String semanaEpdem) {
+        this.semanaEpdem = semanaEpdem;
+    }
+
+    public Integer getAno() {
+        return ano;
+    }
+
+    public void setAno(Integer ano) {
+        this.ano = ano;
+    }
+
+    public Date getNoteDate() {
+        return noteDate;
+    }
+
+    public void setNoteDate(Date noteDate) {
+        this.noteDate = noteDate;
+    }
+
+    public Date getEncerrDate() {
+        return encerrDate;
+    }
+
+    public void setEncerrDate(Date encerrDate) {
+        this.encerrDate = encerrDate;
+    }
+
+    public Date getObitoDate() {
+        return obitoDate;
+    }
+
+    public void setObitoDate(Date obitoDate) {
+        this.obitoDate = obitoDate;
     }
     
 }
