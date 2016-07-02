@@ -9,7 +9,8 @@ package io.github.dengue360.etl.entities;
 import java.util.Date;
 
 /**
- * Entidade que representa os dados de uma tupla do arquivo DBF.
+ * Entidade que representa os dados de uma tupla do arquivo DBF, funciona como 
+ * um Operational Data Store (ODS) em memória.
  * @author Rafael
  */
 public class DataSINAN {

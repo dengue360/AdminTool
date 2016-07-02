@@ -15,7 +15,7 @@ import javax.persistence.Id;
  * @author Rafael
  */
 @Entity 
-public class Lacation implements Serializable{
+public class Location implements Serializable{
     @Id
     private Long id;
     private String rua;
@@ -30,10 +30,10 @@ public class Lacation implements Serializable{
     private String lat;
     private String lng;
 
-    public Lacation() {
+    public Location() {
     }
 
-    public Lacation(String rua, Integer numero, String bairro, String complem, String zona, String cidade, String estado, String uf, String cep, String lat, String lng) {
+    public Location(String rua, Integer numero, String bairro, String complem, String zona, String cidade, String estado, String uf, String cep, String lat, String lng) {
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;

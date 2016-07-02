@@ -6,10 +6,28 @@
 
 package io.github.dengue360.etl;
 
+import io.github.dengue360.etl.entities.DataSINAN;
+import io.github.dengue360.etl.extract.SINANReader;
+import io.github.dengue360.etl.transform.Transformer;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Classe que funciona como um gatilho para a execução do processo de etl
  * @author Rafael
  */
 public class Trigger {
     //deve executar as ações, controlar os erros e se comunicar com a UI
+    public static void main(String[] args) {
+        SINANReader r = new SINANReader();
+        Transformer t = new Transformer();
+        try {
+            List<DataSINAN> listDataSinan =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
+            
+            t.transformAll(listDataSinan);
+        } catch (Exception ex) {
+            Logger.getLogger(LoaderTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

@@ -101,7 +101,8 @@ public class ConverterDBFToObject {
                     d.setClassificacao(String.valueOf(rowObjects[i]));
                     break;
                 default:
-                    throw new DBFException("O campo informado não existe ou foi modificado");
+                    break;
+//throw new DBFException("O campo informado não existe ou foi modificado");
             }
         }
         

@@ -19,16 +19,16 @@ import java.util.logging.Logger;
  */
 public class LoaderTest {
     public static void main(String[] args) {
-        SINANReader r = new SINANReader();
-        try {
-            List<DataSINAN> list =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
-            
-            for (DataSINAN d : list) {
-                System.out.println(d.getLogradouro() + " - " + d.getClassificacao());
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(LoaderTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+//        SINANReader r = new SINANReader();
+//        try {
+//            List<DataSINAN> list =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
+//            
+//            for (DataSINAN d : list) {
+//                System.out.println(d.getLogradouro() + " - " + d.getClassificacao());
+//            }
+//        } catch (Exception ex) {
+//            Logger.getLogger(LoaderTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        System.out.println();
     }
 }
