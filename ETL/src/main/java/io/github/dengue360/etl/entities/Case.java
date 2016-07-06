@@ -7,8 +7,8 @@
 package io.github.dengue360.etl.entities;
 
 import java.io.Serializable;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 /**
  *
@@ -17,10 +17,43 @@ import javax.persistence.Id;
 @Entity
 public class Case implements Serializable{
     
-    //Id temporario
-    @Id
-    private Long ID;
+    @EmbeddedId
+    private CasePK id;
     private Boolean confirmado;
     private Boolean grave;
+
+    public Case() {
+    }
+
+    public Case(CasePK id, Boolean confirmado, Boolean grave) {
+        this.id = id;
+        this.confirmado = confirmado;
+        this.grave = grave;
+    }
+
+    public CasePK getId() {
+        return id;
+    }
+
+    public void setId(CasePK id) {
+        this.id = id;
+    }
+
+    public Boolean isConfirmado() {
+        return confirmado;
+    }
+
+    public void setConfirmado(Boolean confirmado) {
+        this.confirmado = confirmado;
+    }
+
+    public Boolean isGrave() {
+        return grave;
+    }
+
+    public void setGrave(Boolean grave) {
+        this.grave = grave;
+    }
+    
     
 }
