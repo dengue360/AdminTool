@@ -16,7 +16,7 @@ import io.github.dengue360.etl.entities.Time;
 public class TimeTransform implements DimensionTransform <Time, DataSINAN>{
 
     @Override
-    public Time process(DataSINAN paran) {
+    public Time process(DataSINAN param) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -7,13 +7,11 @@
 package io.github.dengue360.etl.transform.strategy;
 
 /**
- * principio do aberto-fechado dentro da implementação 
- * do padrão de projeto strategy
- * 
+ *
  * @author Rafael
- * @param <T>
- * @param <P>
  */
-public interface Strategy <T,P> {
-    T transform(P param);
+public interface SexoStrategy extends Strategy<String, String>{
+
+    @Override
+    public String transform(String param);
 }

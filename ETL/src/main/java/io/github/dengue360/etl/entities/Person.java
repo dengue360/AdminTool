@@ -44,10 +44,6 @@ public class Person implements Serializable{
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Integer getIdade() {
         return idade;
     }

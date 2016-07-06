@@ -15,7 +15,7 @@ import io.github.dengue360.etl.entities.DataSINAN;
  */
 public class CaseTransform implements DimensionTransform<Case, DataSINAN>{
     @Override
-    public Case process(DataSINAN paran) {
+    public Case process(DataSINAN param) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

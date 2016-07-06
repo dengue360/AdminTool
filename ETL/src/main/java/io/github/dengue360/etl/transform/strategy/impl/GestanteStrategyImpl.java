@@ -4,20 +4,19 @@
  * and open the template in the editor.
  */
 
-package io.github.dengue360.etl.transform;
+package io.github.dengue360.etl.transform.strategy.impl;
 
-import io.github.dengue360.etl.entities.DataSINAN;
-import io.github.dengue360.etl.entities.Location;
+import io.github.dengue360.etl.transform.strategy.GestanteStrategy;
 
 /**
  *
  * @author Rafael
  */
-public class LocationTransform implements DimensionTransform<Location, DataSINAN>{
+public class GestanteStrategyImpl implements GestanteStrategy{
 
     @Override
-    public Location process(DataSINAN param) {
+    public String transform(String param) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
+    
 }

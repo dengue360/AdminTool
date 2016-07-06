@@ -4,12 +4,16 @@
  * and open the template in the editor.
  */
 
-package io.github.dengue360.etl.transform;
+package io.github.dengue360.etl.exceptions;
 
 /**
- * Interface de marcação, para os tipos de classe de transformação
+ *
  * @author Rafael
  */
-public interface DimensionTransform <T,P>{
-    public T process(P param);
+public class TransformException extends Exception{
+
+    public TransformException(String msg) {
+        super(msg);
+    }
+    
 }
