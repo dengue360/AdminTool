@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class Person implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer idade;
     private String sexo;

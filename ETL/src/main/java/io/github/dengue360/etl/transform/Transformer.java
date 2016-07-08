@@ -6,7 +6,7 @@
 
 package io.github.dengue360.etl.transform;
 
-import io.github.dengue360.etl.entities.Case;
+import io.github.dengue360.etl.entities.CaseD;
 import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.entities.Location;
 import io.github.dengue360.etl.entities.Person;
@@ -22,7 +22,7 @@ public class Transformer {
     //Obtem a lista de DATASINAN proveniente da extração 
     //Intera sobre os objetos e divide cada instancia entre as classes de 
     //transformação especificas depois repassa os resultados obtidos para a carga
-    private List<Case> caseList;
+    private List<CaseD> caseList;
     private List<Person> personList;
     private List<Location> locationList;
     private List<Time> timeList;
@@ -56,7 +56,7 @@ public class Transformer {
         }
     }
 
-//    private Case transformCase(DataSINAN data, CaseTransform trans){
+//    private CaseD transformCase(DataSINAN data, CaseTransform trans){
 //        return null;
 //    }
 //    
@@ -72,7 +72,7 @@ public class Transformer {
 //        return null;
 //    }
     
-    public List<Case> getCaseList() {
+    public List<CaseD> getCaseList() {
         return caseList;
     }
 

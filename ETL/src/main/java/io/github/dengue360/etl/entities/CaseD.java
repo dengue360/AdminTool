@@ -15,17 +15,17 @@ import javax.persistence.Entity;
  * @author Rafael
  */
 @Entity
-public class Case implements Serializable{
+public class CaseD implements Serializable{
     
     @EmbeddedId
     private CasePK id;
     private Boolean confirmado;
     private Boolean grave;
 
-    public Case() {
+    public CaseD() {
     }
 
-    public Case(CasePK id, Boolean confirmado, Boolean grave) {
+    public CaseD(CasePK id, Boolean confirmado, Boolean grave) {
         this.id = id;
         this.confirmado = confirmado;
         this.grave = grave;

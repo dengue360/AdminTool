@@ -4,8 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>io.github.dengue360.etl.entities.Person</class>
     <class>io.github.dengue360.etl.entities.Time</class>
-    <class>io.github.dengue360.etl.entities.Case</class>
     <class>io.github.dengue360.etl.entities.Location</class>
+    <class>io.github.dengue360.etl.entities.CaseD</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5435/dengue360-DW"/>
       <property name="javax.persistence.jdbc.password" value="123456"/>

@@ -19,7 +19,7 @@ import javax.persistence.Id;
 @Entity 
 public class Location implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String rua;
     private Integer numero;
