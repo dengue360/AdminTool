@@ -13,7 +13,7 @@ import io.github.dengue360.etl.entities.CasePK;
 import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.entities.Location;
 import io.github.dengue360.etl.entities.Person;
-import io.github.dengue360.etl.entities.Time;
+import io.github.dengue360.etl.entities.TimeD;
 import io.github.dengue360.etl.extract.SINANReader;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -41,7 +41,7 @@ public class LoaderTest {
                 "12345", "12345");
         Person p = new Person("12 anos", "Masculino", null, new Date());
         
-        Time t = new Time("Segunda", "Janeiro","201602", 2016, new Date(), new Date(), null);
+        TimeD t = new TimeD("Segunda", "Janeiro","201602", 2016, new Date(), new Date(), null);
         
         DAO dao = DAOFactory.createObjectDao();
         

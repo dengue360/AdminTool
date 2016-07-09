@@ -10,7 +10,7 @@ import io.github.dengue360.etl.entities.CaseD;
 import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.entities.Location;
 import io.github.dengue360.etl.entities.Person;
-import io.github.dengue360.etl.entities.Time;
+import io.github.dengue360.etl.entities.TimeD;
 import io.github.dengue360.etl.exceptions.TransformException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Transformer {
     private List<CaseD> caseList;
     private List<Person> personList;
     private List<Location> locationList;
-    private List<Time> timeList;
+    private List<TimeD> timeList;
 
     public Transformer() {
         this.caseList = new ArrayList<>();
@@ -65,7 +65,7 @@ public class Transformer {
 //        return trans.process();
 //    }
 //    
-//    private Time transformTime(DataSINAN data, TimeTransform trans){
+//    private TimeD transformTime(DataSINAN data, TimeTransform trans){
 //        return null;
 //    }
 //    
@@ -85,7 +85,7 @@ public class Transformer {
         return personList;
     }
 
-    public List<Time> getTimeList() {
+    public List<TimeD> getTimeList() {
         return timeList;
     }
     

@@ -20,7 +20,7 @@ import javax.persistence.TemporalType;
  * @author Rafael
  */
 @Entity
-public class Time implements Serializable{
+public class TimeD implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,10 +35,10 @@ public class Time implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date obitoDate;
 
-    public Time() {
+    public TimeD() {
     }
 
-    public Time(String dia, String mes, String semanaEpdem, Integer ano, Date noteDate, Date encerrDate, Date obitoDate) {
+    public TimeD(String dia, String mes, String semanaEpdem, Integer ano, Date noteDate, Date encerrDate, Date obitoDate) {
         this.dia = dia;
         this.mes = mes;
         this.semanaEpdem = semanaEpdem;
