@@ -39,7 +39,7 @@ public class LoaderTest {
 //        }
         Location l = new Location("1", 12, "centro", null, "Urbana", "Cajazeiras" , "Paraíba", "PB", "58900000",
                 "12345", "12345");
-        Person p = new Person(12, "Masculino", null, new Date());
+        Person p = new Person("12 anos", "Masculino", null, new Date());
         
         Time t = new Time("Segunda", "Janeiro","201602", 2016, new Date(), new Date(), null);
         

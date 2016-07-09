@@ -8,6 +8,7 @@ package io.github.dengue360.etl.transform;
 
 import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.entities.Location;
+import io.github.dengue360.etl.exceptions.TransformException;
 
 /**
  *
@@ -16,7 +17,7 @@ import io.github.dengue360.etl.entities.Location;
 public class LocationTransform implements DimensionTransform<Location, DataSINAN>{
 
     @Override
-    public Location process(DataSINAN param) {
+    public Location process(DataSINAN param) throws TransformException{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    

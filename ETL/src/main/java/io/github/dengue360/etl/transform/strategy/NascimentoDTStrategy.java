@@ -6,6 +6,7 @@
 
 package io.github.dengue360.etl.transform.strategy;
 
+import io.github.dengue360.etl.exceptions.TransformException;
 import java.util.Date;
 
 /**
@@ -15,6 +16,6 @@ import java.util.Date;
 public interface NascimentoDTStrategy extends Strategy<Date, Date>{
 
     @Override
-    public Date transform(Date param);
+    public Date transform(Date param)throws TransformException;
     
 }

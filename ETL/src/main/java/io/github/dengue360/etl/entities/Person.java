@@ -24,13 +24,13 @@ public class Person implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer idade;
+    private String idade;
     private String sexo;
     private String gestante;
     @Temporal(TemporalType.DATE)
     private Date dataNasc;
 
-    public Person(Integer idade, String sexo, String gestante, Date dataNasc) {
+    public Person(String idade, String sexo, String gestante, Date dataNasc) {
         this.idade = idade;
         this.sexo = sexo;
         this.gestante = gestante;
@@ -44,11 +44,11 @@ public class Person implements Serializable{
         return id;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

@@ -6,6 +6,8 @@
 
 package io.github.dengue360.etl.transform.strategy;
 
+import io.github.dengue360.etl.exceptions.TransformException;
+
 /**
  * principio do aberto-fechado dentro da implementação 
  * do padrão de projeto strategy
@@ -15,5 +17,5 @@ package io.github.dengue360.etl.transform.strategy;
  * @param <P>
  */
 public interface Strategy <T,P> {
-    T transform(P param);
+    T transform(P param) throws TransformException;
 }

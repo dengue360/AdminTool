@@ -6,6 +6,8 @@
 
 package io.github.dengue360.etl.transform.strategy;
 
+import io.github.dengue360.etl.exceptions.TransformException;
+
 /**
  *
  * @author Rafael
@@ -13,6 +15,6 @@ package io.github.dengue360.etl.transform.strategy;
 public interface GestanteStrategy extends Strategy<String, String>{
 
     @Override
-    public String transform(String param);
+    public String transform(String param) throws TransformException;
     
 }

@@ -8,6 +8,7 @@ package io.github.dengue360.etl.transform;
 
 import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.entities.Person;
+import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.GestanteStrategy;
 import io.github.dengue360.etl.transform.strategy.IdadeStrategy;
 import io.github.dengue360.etl.transform.strategy.NascimentoDTStrategy;
@@ -24,7 +25,7 @@ import io.github.dengue360.etl.transform.strategy.impl.SexoStrategyImpl;
 public class PersonTransform implements DimensionTransform<Person, DataSINAN>{
 
     @Override
-    public Person process(DataSINAN param) {
+    public Person process(DataSINAN param) throws TransformException{
         Person p = new Person();
         
         IdadeStrategy is = new IdadeStrategyImpl();
@@ -41,6 +42,4 @@ public class PersonTransform implements DimensionTransform<Person, DataSINAN>{
         
         return p;
     }
- 
-    
 }

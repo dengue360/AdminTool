@@ -6,6 +6,7 @@
 
 package io.github.dengue360.etl.transform.strategy.impl;
 
+import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.SexoStrategy;
 
 /**
@@ -15,8 +16,14 @@ import io.github.dengue360.etl.transform.strategy.SexoStrategy;
 public class SexoStrategyImpl implements SexoStrategy{
 
     @Override
-    public String transform(String param) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String transform(String param) throws TransformException{
+        if(param == null)
+            return "";
+        if(param.trim().equalsIgnoreCase("M"))
+            return "Masculino";
+        else if (param.trim().equalsIgnoreCase("F")) 
+            return "Feminino";
+        return "Ignorado";
     }
     
 }

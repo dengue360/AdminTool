@@ -6,10 +6,12 @@
 
 package io.github.dengue360.etl.transform;
 
+import io.github.dengue360.etl.exceptions.TransformException;
+
 /**
  * Interface de marcação, para os tipos de classe de transformação
  * @author Rafael
  */
 public interface DimensionTransform <T,P>{
-    public T process(P param);
+    public T process(P param)throws TransformException;
 }

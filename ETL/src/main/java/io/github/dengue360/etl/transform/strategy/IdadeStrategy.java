@@ -6,13 +6,15 @@
 
 package io.github.dengue360.etl.transform.strategy;
 
+import io.github.dengue360.etl.exceptions.TransformException;
+
 /**
  *
  * @author Rafael
  */
-public interface IdadeStrategy extends Strategy<Integer, String>{
+public interface IdadeStrategy extends Strategy<String, String>{
 
     @Override
-    public Integer transform(String param);
+    public String transform(String param) throws TransformException;
     
 }

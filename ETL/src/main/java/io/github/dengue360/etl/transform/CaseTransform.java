@@ -8,6 +8,7 @@ package io.github.dengue360.etl.transform;
 
 import io.github.dengue360.etl.entities.CaseD;
 import io.github.dengue360.etl.entities.DataSINAN;
+import io.github.dengue360.etl.exceptions.TransformException;
 
 /**
  *
@@ -15,7 +16,7 @@ import io.github.dengue360.etl.entities.DataSINAN;
  */
 public class CaseTransform implements DimensionTransform<CaseD, DataSINAN>{
     @Override
-    public CaseD process(DataSINAN param) {
+    public CaseD process(DataSINAN param) throws TransformException{
         /**
          * primeiro persiste as dimensões 
          * depois pega os id 

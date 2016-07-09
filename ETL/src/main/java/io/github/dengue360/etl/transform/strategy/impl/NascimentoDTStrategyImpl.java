@@ -6,6 +6,7 @@
 
 package io.github.dengue360.etl.transform.strategy.impl;
 
+import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.NascimentoDTStrategy;
 import java.util.Date;
 
@@ -16,8 +17,8 @@ import java.util.Date;
 public class NascimentoDTStrategyImpl implements NascimentoDTStrategy{
 
     @Override
-    public Date transform(Date param) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Date transform(Date param) throws TransformException{
+        return param;
     }
     
 }

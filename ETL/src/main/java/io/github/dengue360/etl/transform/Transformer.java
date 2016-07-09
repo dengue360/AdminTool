@@ -11,6 +11,7 @@ import io.github.dengue360.etl.entities.DataSINAN;
 import io.github.dengue360.etl.entities.Location;
 import io.github.dengue360.etl.entities.Person;
 import io.github.dengue360.etl.entities.Time;
+import io.github.dengue360.etl.exceptions.TransformException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class Transformer {
         this.timeList = new ArrayList<>();
     }
     
-    public void transformAll(List<DataSINAN> list){
+    public void transformAll(List<DataSINAN> list) throws TransformException{
         LocationTransform lcTrans = new LocationTransform();
         PersonTransform prTrans = new PersonTransform();
         TimeTransform tmTrans = new TimeTransform();
