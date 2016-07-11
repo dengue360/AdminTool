@@ -22,9 +22,8 @@ public class Location implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String rua;
-    private Integer numero;
+    private String numero;
     private String bairro;
-    private String complem;
     private String zona;
     private String cidade;
     private String estado;
@@ -36,11 +35,10 @@ public class Location implements Serializable{
     public Location() {
     }
 
-    public Location(String rua, Integer numero, String bairro, String complem, String zona, String cidade, String estado, String uf, String cep, String lat, String lng) {
+    public Location(String rua, String numero, String bairro, String zona, String cidade, String estado, String uf, String cep, String lat, String lng) {
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
-        this.complem = complem;
         this.zona = zona;
         this.cidade = cidade;
         this.estado = estado;
@@ -63,11 +61,11 @@ public class Location implements Serializable{
         this.rua = rua;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Integer numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -77,14 +75,6 @@ public class Location implements Serializable{
 
     public void setBairro(String bairro) {
         this.bairro = bairro;
-    }
-
-    public String getComplem() {
-        return complem;
-    }
-
-    public void setComplem(String complem) {
-        this.complem = complem;
     }
 
     public String getZona() {

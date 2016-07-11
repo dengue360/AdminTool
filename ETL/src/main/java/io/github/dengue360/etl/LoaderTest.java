@@ -37,7 +37,7 @@ public class LoaderTest {
 //        } catch (Exception ex) {
 //            Logger.getLogger(LoaderTest.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-        Location l = new Location("1", 12, "centro", null, "Urbana", "Cajazeiras" , "Paraíba", "PB", "58900000",
+        Location l = new Location("1", "12", "centro","Urbana", "Cajazeiras" , "Paraíba", "PB", "58900000",
                 "12345", "12345");
         Person p = new Person("12 anos", "Masculino", null, new Date());
         

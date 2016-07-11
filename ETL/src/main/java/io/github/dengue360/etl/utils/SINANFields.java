@@ -26,7 +26,6 @@ public enum SINANFields {
     NM_BAIRRO("Bairro","Nome do bairro de residência"),
     NM_LOGRADO("Rua","Nome da rua de residência"),
     NU_NUMERO("Numero da Residência","Numero da Residência"),
-    NM_COMPLEM("Complemento do Logradouro","Complemento do logradouro"),
     NU_CEP("CEP","Numero do CEP do municipio de residencia"),
     CS_ZONA("Zona","Zona de residência do paciente por ocasião da notificação"),
     DT_OBITO("Data do Obito", "Data do obito, caso tenha ocorrido"),
@@ -65,8 +64,8 @@ public enum SINANFields {
     RESUL_SORO	("",""),    DT_NS1	("",""),    RESUL_NS1	("",""),    DT_VIRAL	("",""),
     RESUL_VI_N	("",""),    DT_PCR	("",""),    RESUL_PCR_	("",""),    SOROTIPO	("",""),    
     HISTOPA_N	("",""),    IMUNOH_N	("",""),    HOSPITALIZ	("",""),    DT_INTERNA	("",""),    
-    UF	("",""),    MUNICIPIO	("",""),    HOSPITAL	("",""),    DDD_HOSP	("",""),    
-    TEL_HOSP	("",""),    TPAUTOCTO   ("",""),     NOBAIINF    ("","");
+    UF          ("",""),    MUNICIPIO	("",""),    HOSPITAL	("",""),    DDD_HOSP	("",""),    
+    TEL_HOSP	("",""),    TPAUTOCTO   ("",""),    NOBAIINF    ("",""),     NM_COMPLEM ("","");
     
     private String description;
     private String name;

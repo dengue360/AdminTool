@@ -23,7 +23,6 @@ public class DataSINAN {
     private String codGesta;
     private String bairro;
     private String logradouro;
-    private String compleLogra;
     private String cep;
     private String codZona;
     private String idade;
@@ -101,15 +100,7 @@ public class DataSINAN {
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
     }
-
-    public String getCompleLogra() {
-        return compleLogra;
-    }
-
-    public void setCompleLogra(String compleLogra) {
-        this.compleLogra = compleLogra;
-    }
-
+    
     public String getCep() {
         return cep;
     }

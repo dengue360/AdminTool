@@ -85,9 +85,6 @@ public class ConverterDBFToObject {
                 case NM_LOGRADO:
                     d.setLogradouro(String.valueOf(rowObjects[i]));
                     break;
-                case NM_COMPLEM:
-                    d.setCompleLogra(String.valueOf(rowObjects[i]));
-                    break;
                 case NU_CEP:
                     d.setCep(String.valueOf(rowObjects[i]));
                     break;
