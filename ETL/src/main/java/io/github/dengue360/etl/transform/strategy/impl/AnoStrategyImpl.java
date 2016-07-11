@@ -17,7 +17,7 @@ public class AnoStrategyImpl implements AnoStrategy{
 
     @Override
     public Integer transform(Integer param) throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return param;
     }
     
 }

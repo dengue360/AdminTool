@@ -18,7 +18,7 @@ public class ObitoDTStrategyImpl implements ObitoDTStrategy{
 
     @Override
     public Date transform(Date param) throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return param;
     }
     
 }

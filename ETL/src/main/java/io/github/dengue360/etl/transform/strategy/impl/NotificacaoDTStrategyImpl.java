@@ -9,6 +9,10 @@ package io.github.dengue360.etl.transform.strategy.impl;
 import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.NotificacaoDTStrategy;
 import java.util.Date;
+import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 /**
  *
@@ -20,17 +24,26 @@ public class NotificacaoDTStrategyImpl implements NotificacaoDTStrategy{
     @Override
     public Date transform(Date param) throws TransformException {
         this.data = param;
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return data;
     }
 
     @Override
     public String getDay() throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(data);
+        LocalDate d = LocalDate.of(cal.get(Calendar.YEAR), 
+                cal.get(Calendar.MONTH) + 1,
+                cal.get(Calendar.DAY_OF_MONTH));
+        return d.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt-br"));
     }
 
     @Override
     public String getMonth() throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(data);
+        LocalDate d = LocalDate.of(cal.get(Calendar.YEAR), 
+                cal.get(Calendar.MONTH) + 1,
+                cal.get(Calendar.DAY_OF_MONTH));
+        return d.getMonth().getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt-br")); 
     }
-    
 }

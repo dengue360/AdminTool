@@ -17,7 +17,7 @@ public class SemEpdemStrategyImpl implements SemEpdemStrategy{
 
     @Override
     public String transform(String param) throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return param;
     }
     
 }
