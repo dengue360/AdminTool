@@ -50,7 +50,7 @@ public class LoaderTest {
         dao.salvar(t);
                
         CasePK cpk = new CasePK(p.getId(), l.getId(), t.getId());
-        CaseD c = new CaseD(cpk, Boolean.TRUE, Boolean.FALSE);
+        CaseD c = new CaseD(cpk, Boolean.TRUE, Boolean.FALSE, "Dengue");
         
         dao.salvar(c);
     }
