@@ -92,7 +92,7 @@ public class ConverterDBFToObject {
                     d.setCodZona(String.valueOf(rowObjects[i]));
                     break;    
                 case NU_NUMERO:
-                    d.setNumRua(String.valueOf(rowObjects[i]));
+                    d.setNumCasa(String.valueOf(rowObjects[i]));
                     break;
                 case CLASSI_FIN:
                     d.setClassificacao(String.valueOf(rowObjects[i]));

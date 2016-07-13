@@ -21,14 +21,16 @@ public class CaseD implements Serializable{
     private CasePK id;
     private Boolean confirmado;
     private Boolean grave;
+    private String agravo;
 
     public CaseD() {
     }
 
-    public CaseD(CasePK id, Boolean confirmado, Boolean grave) {
+    public CaseD(CasePK id, Boolean confirmado, Boolean grave, String agravo) {
         this.id = id;
         this.confirmado = confirmado;
         this.grave = grave;
+        this.agravo = agravo;
     }
 
     public CasePK getId() {
@@ -54,6 +56,13 @@ public class CaseD implements Serializable{
     public void setGrave(Boolean grave) {
         this.grave = grave;
     }
-    
+
+    public String getAgravo() {
+        return agravo;
+    }
+
+    public void setAgravo(String agravo) {
+        this.agravo = agravo;
+    }
     
 }

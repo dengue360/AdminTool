@@ -15,6 +15,15 @@ import io.github.dengue360.etl.transform.strategy.LatLngStrategy;
  */
 public class LatLgnStrategyImpl implements LatLngStrategy{
 
+    
+    public LatLgnStrategyImpl(String rua, String bairro, String num, String cidade, String estado, String cep) {
+    
+    }
+
+    public LatLgnStrategyImpl() {
+    }
+
+    
     @Override
     public String transform(String param) throws TransformException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

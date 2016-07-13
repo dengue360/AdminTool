@@ -27,7 +27,7 @@ public class DataSINAN {
     private String codZona;
     private String idade;
     private Integer ano;
-    private String numRua;
+    private String numCasa;
     private String classificacao;
     private Date notificacaoDT;
     private Date encerramentoDT;
@@ -133,12 +133,12 @@ public class DataSINAN {
         this.ano = ano;
     }
 
-    public String getNumRua() {
-        return numRua;
+    public String getNumCasa() {
+        return numCasa;
     }
 
-    public void setNumRua(String numRua) {
-        this.numRua = numRua;
+    public void setNumCasa(String numCasa) {
+        this.numCasa = numCasa;
     }
 
     public Date getNotificacaoDT() {
