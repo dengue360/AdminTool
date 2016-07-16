@@ -17,7 +17,7 @@ import io.github.dengue360.etl.transform.strategy.RuaStrategy;
 import io.github.dengue360.etl.transform.strategy.ZonaStrategy;
 import io.github.dengue360.etl.transform.strategy.impl.BairroStrategyImpl;
 import io.github.dengue360.etl.transform.strategy.impl.CidadeInfoStrategyImpl;
-import io.github.dengue360.etl.transform.strategy.impl.LatLgnStrategyImpl;
+import io.github.dengue360.etl.transform.strategy.impl.LatLngStrategyImpl;
 import io.github.dengue360.etl.transform.strategy.impl.NumeroCasaStrategyImpl;
 import io.github.dengue360.etl.transform.strategy.impl.RuaStrategyImpl;
 import io.github.dengue360.etl.transform.strategy.impl.ZonaStrategyImpl;
@@ -50,9 +50,9 @@ public class LocationTransform implements DimensionTransform<Location, DataSINAN
         l.setEstado(cis.getEstado());
         l.setCep(cis.getCep(param.getCep()));
         
-        LatLngStrategy lls = new LatLgnStrategyImpl(l.getRua(), l.getBairro(), 
-                l.getNumero(), l.getCidade(), l.getEstado(), l.getCep());
-        
+        LatLngStrategy lls = new LatLngStrategyImpl(l.getRua(), l.getBairro(), 
+                l.getNumero(), l.getCidade(), l.getEstado());
+        lls.transform("");
         l.setLat(lls.getLat());
         l.setLng(lls.getLng());
         
