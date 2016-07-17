@@ -21,15 +21,18 @@ public class CaseD implements Serializable{
     private CasePK id;
     private Boolean confirmado;
     private Boolean grave;
+    private Boolean obito;
     private String agravo;
+    
 
     public CaseD() {
     }
 
-    public CaseD(CasePK id, Boolean confirmado, Boolean grave, String agravo) {
+    public CaseD(CasePK id, Boolean confirmado, Boolean grave, String agravo, Boolean obito) {
         this.id = id;
         this.confirmado = confirmado;
         this.grave = grave;
+        this.obito = obito;
         this.agravo = agravo;
     }
 
@@ -55,6 +58,14 @@ public class CaseD implements Serializable{
 
     public void setGrave(Boolean grave) {
         this.grave = grave;
+    }
+
+    public Boolean isObito() {
+        return obito;
+    }
+
+    public void setObito(Boolean obito) {
+        this.obito = obito;
     }
 
     public String getAgravo() {

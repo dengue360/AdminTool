@@ -17,7 +17,11 @@ public class RuaStrategyImpl implements RuaStrategy{
 
     @Override
     public String transform(String param) throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(param == null)
+            return "";
+        //apesar das imperfeições no endereço a api do google consegue 
+        //identificar mesmo assim por isso não foi meito o tratamento da string
+        return param.trim();
     }
     
 }

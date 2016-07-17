@@ -11,8 +11,6 @@ import com.google.maps.GeocodingApi;
 import com.google.maps.model.GeocodingResult;
 import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.LatLngStrategy;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -36,8 +34,8 @@ public class LatLngStrategyImpl implements LatLngStrategy{
     }
     //Questionar a necessidade do bairro
     private String makeAddress()throws TransformException{
-        String ad = null;
-        if ((rua==null || rua.equals("")) && (bairro==null || bairro.equals(""))) //sem os dois não da pra saber uma localização precisa
+        String ad = "";
+        if (rua.equals("") && bairro.equals("")) //sem os dois não da pra saber uma localização precisa
             throw new TransformException("Endereço incompleto");
         if (num == null)
             ad = rua + ", " + bairro + ", " + cidade + ", " + estado;
@@ -77,7 +75,7 @@ public class LatLngStrategyImpl implements LatLngStrategy{
     }   
     
     public static void main(String[] args) throws Exception {
-      LatLngStrategy l = new LatLngStrategyImpl("João de Sousa Maciel", "Centro", "274", "Cajazeiras", "PB");
+      LatLngStrategy l = new LatLngStrategyImpl("R:João de Sousa Maciel", "Centro", "274", "Cajazeiras", "PB");
         System.out.println(l.transform(""));
         System.out.println(l.getLat());
         System.out.println(l.getLng());

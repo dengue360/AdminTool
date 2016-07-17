@@ -17,7 +17,19 @@ public class ZonaStrategyImpl implements ZonaStrategy{
 
     @Override
     public String transform(String param) throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(param == null)
+            return "";
+        return getZona(param);
+    }
+
+    private String getZona(String param) {
+        if(param.equals("1"))
+            return "Zona Urbana";
+        if(param.equals("2"))
+            return "Zona Rural";
+        if(param.equals("3"))
+            return "Zona Periurbana";
+        return "Ignorada";
     }
     
 }

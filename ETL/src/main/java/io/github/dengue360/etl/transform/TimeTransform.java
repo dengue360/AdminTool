@@ -44,9 +44,6 @@ public class TimeTransform implements DimensionTransform <TimeD, DataSINAN>{
         EncerramentoDTStrategy edts = new EncerramentoDTStrategyImpl();
         t.setEncerrDate(edts.transform(param.getEncerramentoDT()));
         
-        ObitoDTStrategy odts = new ObitoDTStrategyImpl();
-        t.setObitoDate(odts.transform(param.getObitoDT()));
-        
         return t;
     }
 

@@ -17,7 +17,9 @@ public class BairroStrategyImpl implements BairroStrategy{
 
     @Override
     public String transform(String param) throws TransformException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(param == null)
+            return "";
+        return param;
     }
     
 }

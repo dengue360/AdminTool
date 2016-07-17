@@ -41,7 +41,7 @@ public class LoaderTest {
                 "12345", "12345");
         Person p = new Person("12 anos", "Masculino", null, new Date());
         
-        TimeD t = new TimeD("Segunda", "Janeiro","201602", 2016, new Date(), new Date(), null);
+        TimeD t = new TimeD("Segunda", "Janeiro","201602", 2016, new Date(), new Date());
         
         DAO dao = DAOFactory.createObjectDao();
         
@@ -50,7 +50,7 @@ public class LoaderTest {
         dao.salvar(t);
                
         CasePK cpk = new CasePK(p.getId(), l.getId(), t.getId());
-        CaseD c = new CaseD(cpk, Boolean.TRUE, Boolean.FALSE, "Dengue");
+        CaseD c = new CaseD(cpk, Boolean.TRUE, Boolean.FALSE, "Dengue", Boolean.FALSE);
         
         dao.salvar(c);
     }

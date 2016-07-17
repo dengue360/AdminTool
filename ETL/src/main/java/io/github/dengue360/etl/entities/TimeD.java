@@ -32,20 +32,17 @@ public class TimeD implements Serializable{
     private Date noteDate;
     @Temporal(TemporalType.DATE)
     private Date encerrDate;
-    @Temporal(TemporalType.DATE)
-    private Date obitoDate;
-
+    
     public TimeD() {
     }
 
-    public TimeD(String dia, String mes, String semanaEpdem, Integer ano, Date noteDate, Date encerrDate, Date obitoDate) {
+    public TimeD(String dia, String mes, String semanaEpdem, Integer ano, Date noteDate, Date encerrDate) {
         this.dia = dia;
         this.mes = mes;
         this.semanaEpdem = semanaEpdem;
         this.ano = ano;
         this.noteDate = noteDate;
         this.encerrDate = encerrDate;
-        this.obitoDate = obitoDate;
     }
 
     
@@ -101,12 +98,4 @@ public class TimeD implements Serializable{
         this.encerrDate = encerrDate;
     }
 
-    public Date getObitoDate() {
-        return obitoDate;
-    }
-
-    public void setObitoDate(Date obitoDate) {
-        this.obitoDate = obitoDate;
-    }
-    
 }
