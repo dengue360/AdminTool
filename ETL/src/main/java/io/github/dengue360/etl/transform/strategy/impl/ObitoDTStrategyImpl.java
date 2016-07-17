@@ -17,8 +17,10 @@ import java.util.Date;
 public class ObitoDTStrategyImpl implements ObitoDTStrategy{
 
     @Override
-    public Date transform(Date param) throws TransformException {
-        return param;
+    public Boolean transform(Date param) throws TransformException {
+        if(param == null)
+            return Boolean.FALSE;
+        return Boolean.TRUE;
     }
     
 }

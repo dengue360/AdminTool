@@ -11,9 +11,9 @@ import java.util.Date;
  *
  * @author Rafael
  */
-public interface ObitoDTStrategy extends Strategy<Date, Date>{
+public interface ObitoDTStrategy extends Strategy<Boolean, Date>{
 
     @Override
-    public Date transform(Date param) throws TransformException;
+    public Boolean transform(Date param) throws TransformException;   
     
 }
