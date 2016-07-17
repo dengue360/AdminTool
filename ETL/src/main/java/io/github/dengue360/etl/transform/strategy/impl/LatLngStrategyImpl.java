@@ -75,7 +75,7 @@ public class LatLngStrategyImpl implements LatLngStrategy{
     }   
     
     public static void main(String[] args) throws Exception {
-      LatLngStrategy l = new LatLngStrategyImpl("R:João de Sousa Maciel", "Centro", "274", "Cajazeiras", "PB");
+      LatLngStrategy l = new LatLngStrategyImpl("R:João de Sousa Maciel", "Centro", "274", "Cajazeiras", "Paraíba");
         System.out.println(l.transform(""));
         System.out.println(l.getLat());
         System.out.println(l.getLng());
