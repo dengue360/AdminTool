@@ -11,6 +11,8 @@ import io.github.dengue360.etl.dao.DAOFactory;
 import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.CidadeInfoStrategy;
 import io.github.dengue360.etl.utils.MunicipiosBrasil;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  *
@@ -22,18 +24,24 @@ public class CidadeInfoStrategyImpl implements CidadeInfoStrategy{
             
     public CidadeInfoStrategyImpl() {
         this.dao = DAOFactory.createMunicipiosDao();
+        this.municipio = new MunicipiosBrasil();
     }
     
     
     @Override
     public String transform(String param) throws TransformException {
-        Integer cod_mun = Integer.parseInt(param);
-        municipio = dao.buscar(cod_mun, MunicipiosBrasil.class);
+        Map<String, Object> map = new HashMap();
+        map.put("cod", param+"%");
+        municipio = dao.consultaSimples("m.get", map); // fazer consulta
+        if(municipio.getNomeMunicipio() == null)
+            return "";
         return municipio.getNomeMunicipio();
     }
 
     @Override
     public String getUF(String codUF) throws TransformException {
+        if(municipio.getNomeEstado() == null)
+            return "";
         String uf = "";
         switch(municipio.getNomeEstado()){
             case "Acre": uf = "AC"; break;
@@ -71,6 +79,8 @@ public class CidadeInfoStrategyImpl implements CidadeInfoStrategy{
   
     @Override
     public String getEstado() throws TransformException {
+        if(municipio.getNomeEstado() == null)
+            return "";
         return municipio.getNomeEstado();
     }
 

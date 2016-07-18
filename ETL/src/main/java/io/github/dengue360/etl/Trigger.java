@@ -27,6 +27,10 @@ public class Trigger {
         try {
             List<DataSINAN> listDataSinan =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
             
+            for (DataSINAN dataSINAN : listDataSinan) {
+                System.out.println(dataSINAN.getCodMunicip());
+            }
+            
             t.transformAll(listDataSinan);
             
             l.loadDW(t.getCaseList(),t.getTimeList(),t.getLocationList(),t.getPersonList());

@@ -9,17 +9,23 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 /**
  *
  * @author Rafael
  */
+@NamedQueries({
+    @NamedQuery(name = "m.get",query = "SELECT m FROM MunicipiosBrasil m WHERE m.codMunicipio LIKE :cod")    
+})
+
 @Entity
 @Table(name = "cidades")
 public class MunicipiosBrasil implements Serializable {
     @Id
     @Column(name = "Cod_Municipio_Completo")
-    private Integer codMunicipio;
+    private String codMunicipio;
     @Column(name = "Municipio")
     private Integer shortCodMun;
     @Column(name = "UF")
@@ -34,17 +40,17 @@ public class MunicipiosBrasil implements Serializable {
     private Integer codMicro;
     @Column(name = "Nome_Microrregiao")
     private String nomeMicro;
-    @Column(name = "Nome_Município")
+    @Column(name = "Nome_Municipio")
     private String nomeMunicipio;
 
     public MunicipiosBrasil() {
     }
 
-    public Integer getCodMunicipio() {
+    public String getCodMunicipio() {
         return codMunicipio;
     }
 
-    public void setCodMunicipio(Integer codMunicipio) {
+    public void setCodMunicipio(String codMunicipio) {
         this.codMunicipio = codMunicipio;
     }
 

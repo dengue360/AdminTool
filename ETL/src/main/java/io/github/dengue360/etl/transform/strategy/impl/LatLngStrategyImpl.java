@@ -61,7 +61,7 @@ public class LatLngStrategyImpl implements LatLngStrategy{
         }
         this.lat = String.valueOf(results[0].geometry.location.lat);
         this.lng = String.valueOf(results[0].geometry.location.lng);
-        return "SUCESS";
+        return "SUCCESS";
     }
 
     @Override
