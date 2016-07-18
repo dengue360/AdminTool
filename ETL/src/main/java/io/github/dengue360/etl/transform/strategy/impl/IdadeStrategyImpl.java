@@ -17,16 +17,23 @@ public class IdadeStrategyImpl implements IdadeStrategy{
 
     @Override
     public String transform(String param) throws TransformException{
-        if(param == null || param.trim().equals(""))
+        if(param == null || param.trim().equals("") || param.trim().length()<4)
             return "";
         String type = param.substring(0, 1);
         String age  = param.substring(1, 4);
         
         return convertAge(age) + convertType(type);
     }
-
-    private String convertAge(String age) {
-        Integer i = Integer.parseInt(age);
+    
+    //Testar 
+    private String convertAge(String age) {       
+         Integer i = 0;
+         try{
+            i = Integer.parseInt(age);
+         } catch(java.lang.NumberFormatException ex){
+            return ""; 
+         }
+        
         return i.toString();
     }
 

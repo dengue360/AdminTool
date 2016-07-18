@@ -25,7 +25,7 @@ public class GestanteStrategyImpl implements GestanteStrategy{
     private String convert(String param) throws TransformException {
         String result = "1";
      
-        switch(param){
+        switch(param.trim()){
             case "1" : result= "1º Trimestre";
                 break;
             case "2" : result= "2º Trimestre";

@@ -23,11 +23,11 @@ public class ZonaStrategyImpl implements ZonaStrategy{
     }
 
     private String getZona(String param) {
-        if(param.equals("1"))
+        if(param.trim().equals("1"))
             return "Zona Urbana";
-        if(param.equals("2"))
+        if(param.trim().equals("2"))
             return "Zona Rural";
-        if(param.equals("3"))
+        if(param.trim().equals("3"))
             return "Zona Periurbana";
         return "Ignorada";
     }

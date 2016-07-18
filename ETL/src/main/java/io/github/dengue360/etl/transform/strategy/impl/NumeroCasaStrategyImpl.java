@@ -19,7 +19,7 @@ public class NumeroCasaStrategyImpl implements NumeroCasaStrategy{
     public String transform(String param) throws TransformException {
         if(param == null)
             return "";
-        return param;
+        return param.trim();
     }
     
 }

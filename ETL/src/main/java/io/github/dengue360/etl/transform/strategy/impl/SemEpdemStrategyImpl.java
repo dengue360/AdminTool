@@ -17,7 +17,7 @@ public class SemEpdemStrategyImpl implements SemEpdemStrategy{
 
     @Override
     public String transform(String param) throws TransformException {
-        return param;
+        return param.trim();
     }
     
 }

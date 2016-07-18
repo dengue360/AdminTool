@@ -17,7 +17,7 @@ public class AgravoStrategyImpl implements AgravoStrategy{
 
     @Override
     public String transform(String param) throws TransformException {
-        if (param.equals("A90"))
+        if (param.trim().equals("A90"))
             return "Dengue";
         return "";
     }

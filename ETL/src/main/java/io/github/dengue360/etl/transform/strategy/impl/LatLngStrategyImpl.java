@@ -11,6 +11,8 @@ import com.google.maps.GeocodingApi;
 import com.google.maps.model.GeocodingResult;
 import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.transform.strategy.LatLngStrategy;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -36,7 +38,7 @@ public class LatLngStrategyImpl implements LatLngStrategy{
     private String makeAddress()throws TransformException{
         String ad = "";
         if (rua.equals("") && bairro.equals("")) //sem os dois não da pra saber uma localização precisa
-            throw new TransformException("Endereço incompleto");
+            return ad;
         if (num == null)
             ad = rua + ", " + bairro + ", " + cidade + ", " + estado;
         else  
@@ -51,8 +53,10 @@ public class LatLngStrategyImpl implements LatLngStrategy{
         try {
             results = GeocodingApi.geocode(context,
                     makeAddress()).await();
-        } catch (Exception ex) {
+        } catch (java.net.UnknownHostException ex) {
             throw new TransformException(ex.getMessage());
+        } catch (Exception ex) {
+            Logger.getLogger(LatLngStrategyImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(results == null || results.length < 1){
             this.lat = "";
