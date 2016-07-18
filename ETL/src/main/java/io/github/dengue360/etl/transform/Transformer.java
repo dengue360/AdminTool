@@ -48,6 +48,7 @@ public class Transformer {
                 personList.add(prTrans.process(sinanData));
                 timeList.add(tmTrans.process(sinanData));
                 //verificar como fazer com os casos, testar a possibilidade de fazer ele num for diferente já que ele precisa das outras listas.
+                
                 caseList.add(csTrans.process(sinanData)); 
 //                locationList.add(transformLocation(sinanData, lcTrans));
 //                personList.add(transformPerson(sinanData, prTrans));

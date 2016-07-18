@@ -52,6 +52,8 @@ public class LoaderTest {
         CasePK cpk = new CasePK(p.getId(), l.getId(), t.getId());
         CaseD c = new CaseD(cpk, Boolean.TRUE, Boolean.FALSE, "Dengue", Boolean.FALSE);
         
+        
         dao.salvar(c);
+        
     }
 }
