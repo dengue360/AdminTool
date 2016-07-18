@@ -15,6 +15,8 @@ import io.github.dengue360.etl.exceptions.TransformException;
  * @author Rafael
  */
 public class CaseTransform implements DimensionTransform<CaseD, DataSINAN>{
+    
+    
     @Override
     public CaseD process(DataSINAN param) throws TransformException{
         /**
@@ -22,6 +24,7 @@ public class CaseTransform implements DimensionTransform<CaseD, DataSINAN>{
          * depois pega os id 
          * e persiste os casos;
          */
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        CaseD c = new CaseD();
+        return c;
     }
 }
