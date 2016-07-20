@@ -24,9 +24,8 @@ public class ClassificacaoStrategyImpl implements ClassificacaoStrategy{
     public Boolean transform(String param) throws TransformException {
         Boolean confirmado = Boolean.FALSE;
         if(!param.trim().equals("5")){
-            if(param.trim().equals("8"))
-                confirmado= Boolean.TRUE;
-            else
+            confirmado= Boolean.TRUE;
+            if(!param.trim().equals("8"))
                 grave = Boolean.TRUE;
         }    
         return confirmado;

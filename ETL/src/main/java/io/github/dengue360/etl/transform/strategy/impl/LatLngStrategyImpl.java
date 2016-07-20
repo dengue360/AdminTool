@@ -34,15 +34,17 @@ public class LatLngStrategyImpl implements LatLngStrategy{
         this.num = num;
         this.rua = rua;
     }
-    //Questionar a necessidade do bairro
+    //Questionar a necessidade do bairro 
+    //retirado o bairro do endereço,pois o nome do bairro informado no SINAN 
+    //não codiz com o real identificado pelo google o que resulta em uma localização equivocada
     private String makeAddress()throws TransformException{
         String ad = "";
-        if (rua.equals("") && bairro.equals("")) //sem os dois não da pra saber uma localização precisa
+        if (rua.equals("")) //sem os dois não da pra saber uma localização precisa
             return ad;
         if (num == null)
-            ad = rua + ", " + bairro + ", " + cidade + ", " + estado;
+            ad = rua + ", " + cidade + ", " + estado;
         else  
-            ad = num + ", " + rua + ", " + bairro + ", " + cidade + ", " + estado;
+            ad = num + ", " + rua + ", " + cidade + ", " + estado;
         return ad;
     }
     

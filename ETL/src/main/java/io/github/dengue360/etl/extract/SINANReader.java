@@ -6,9 +6,12 @@
 
 package io.github.dengue360.etl.extract;
 
+import com.linuxense.javadbf.DBFException;
 import com.linuxense.javadbf.DBFReader;
 import io.github.dengue360.etl.entities.DataSINAN;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
@@ -26,7 +29,7 @@ public class SINANReader {
         this.filePath = filePath;
     }
 
-    public List<DataSINAN> process(String path) throws Exception{
+    public List<DataSINAN> process(String path) throws FileNotFoundException, DBFException, IOException{
         this.filePath = path;
         InputStream inputStream = new FileInputStream(filePath); // take dbf file as program argument
         DBFReader reader = new DBFReader(inputStream);

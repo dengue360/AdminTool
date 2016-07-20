@@ -6,13 +6,16 @@
 
 package io.github.dengue360.etl;
 
+import com.linuxense.javadbf.DBFException;
 import io.github.dengue360.etl.entities.DataSINAN;
+import io.github.dengue360.etl.exceptions.TransformException;
 import io.github.dengue360.etl.extract.SINANReader;
 import io.github.dengue360.etl.load.Loader;
 import io.github.dengue360.etl.transform.Transformer;
+import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+
 
 /**
  * Classe que funciona como um gatilho para a execução do processo de etl
@@ -20,19 +23,15 @@ import java.util.logging.Logger;
  */
 public class Trigger {
     //deve executar as ações, controlar os erros e se comunicar com a UI
-    public static void main(String[] args) {
+    public static void main(String[] args) throws TransformException, DBFException, IOException{
         SINANReader r = new SINANReader();
         Transformer t = new Transformer();
         Loader      l = new Loader();
-        try {
-            List<DataSINAN> listDataSinan =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
-            
-            t.transformAll(listDataSinan);
-            
-            l.loadDW(t.getCaseList(),t.getTimeList(),t.getLocationList(),t.getPersonList());
-            
-        } catch (Exception ex) {
-            Logger.getLogger(LoaderTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
+        List<DataSINAN> listDataSinan =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
+        
+        t.transformAll(listDataSinan);
+        
+        l.loadDW(t.getCaseList(),t.getTimeList(),t.getLocationList(),t.getPersonList());
     }
-}
+}   
