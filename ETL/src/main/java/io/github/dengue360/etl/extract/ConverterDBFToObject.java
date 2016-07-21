@@ -29,7 +29,7 @@ public class ConverterDBFToObject {
         List<DataSINAN> list = new ArrayList();
         DataSINAN d= new DataSINAN();
         //teste de apenas um com if, para ler todos basta trocar por um while 
-        while((rowObjects = reader.nextRecord()) != null) {
+        if((rowObjects = reader.nextRecord()) != null) {
             list.add(converter(d, rowObjects, reader));
             d = new DataSINAN();
         }

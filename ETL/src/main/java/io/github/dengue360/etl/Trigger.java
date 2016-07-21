@@ -23,15 +23,24 @@ import java.util.List;
  */
 public class Trigger {
     //deve executar as ações, controlar os erros e se comunicar com a UI
-    public static void main(String[] args) throws TransformException, DBFException, IOException{
+    private final String path;
+
+    public Trigger(String path) {
+        this.path = path;
+    }
+    
+    
+    public Boolean execute() throws TransformException, DBFException, IOException{
         SINANReader r = new SINANReader();
         Transformer t = new Transformer();
         Loader      l = new Loader();
         
-        List<DataSINAN> listDataSinan =  r.process("C:/Users/Rafael/Desktop/Rafael/TCC/DENGON436247_00.dbf");
+        List<DataSINAN> listDataSinan =  r.process(path);
         
         t.transformAll(listDataSinan);
         
         l.loadDW(t.getCaseList(),t.getTimeList(),t.getLocationList(),t.getPersonList());
+        
+        return Boolean.TRUE;
     }
 }   

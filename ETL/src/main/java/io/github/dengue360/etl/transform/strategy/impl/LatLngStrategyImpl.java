@@ -55,7 +55,7 @@ public class LatLngStrategyImpl implements LatLngStrategy{
         try {
             results = GeocodingApi.geocode(context,
                     makeAddress()).await();
-        } catch (java.net.UnknownHostException ex) {
+        } catch (java.net.UnknownHostException | java.net.SocketTimeoutException ex) {
             throw new TransformException(ex.getMessage());
         } catch (Exception ex) {
             Logger.getLogger(LatLngStrategyImpl.class.getName()).log(Level.SEVERE, null, ex);

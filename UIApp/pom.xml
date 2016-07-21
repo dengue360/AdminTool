@@ -12,4 +12,11 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.github.dengue360</groupId>
+            <artifactId>ETL</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>
