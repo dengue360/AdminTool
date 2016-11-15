@@ -46,13 +46,10 @@ public class App extends javax.swing.JFrame {
                                 proc.setText("Processando... Aguarde!");
                                 Trigger t = new Trigger(file);
                                 try{
-                                    System.out.println("indo pro while...");
                                     Boolean result = false;
                                     while (!result) {                               
                                     //Todo o processo com o trigger vem aqui
-                                        result = t.execute();
-                                        System.out.println(result);
-                                        
+                                        result = t.execute();  
                                     }
                                 }catch(TransformException e){
                                     JOptionPane.showMessageDialog(null, "Erro no processo de transformação! "
@@ -118,7 +115,6 @@ public class App extends javax.swing.JFrame {
         });
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
-        logo.setMaximumSize(new java.awt.Dimension(300, 300));
 
         select.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         select.setText("Selecione um arquivo DBF do SINAN");
@@ -139,7 +135,7 @@ public class App extends javax.swing.JFrame {
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo)
                 .addGap(100, 100, 100))
             .addGroup(Panel1Layout.createSequentialGroup()
                 .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,7 +159,7 @@ public class App extends javax.swing.JFrame {
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel1Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo)
                 .addGap(18, 18, 18)
                 .addComponent(select)
                 .addGap(18, 18, 18)
@@ -199,16 +195,23 @@ public class App extends javax.swing.JFrame {
         chooser.setAcceptAllFileFilterUsed(false);
         int result = chooser.showOpenDialog(Panel1);
         if(result== chooser.APPROVE_OPTION){
-            HistoryDBFUpdate history = new HistoryDBFUpdate(chooser.getSelectedFile().getName());
-            if (!history.check()) {
-                JOptionPane.showMessageDialog(null, "O arquivo selecionado já foi processado pelo sistema."
-                        + " Por favor, repita a operação!", "Arquivo já processado", JOptionPane.INFORMATION_MESSAGE);
-                return;
-            }
-            history.save();
-            nameFile.setText(chooser.getSelectedFile().getName());
-            b1.setEnabled(true);
             file = chooser.getSelectedFile().getPath();
+            String dbfName = chooser.getSelectedFile().getName();
+            try{
+                HistoryDBFUpdate history = HistoryDBFUpdate.getInstance();
+                if (!history.check(dbfName)) {
+                    JOptionPane.showMessageDialog(null, "O arquivo selecionado já foi processado pelo sistema."
+                            + "\n Por favor, repita a operação com outro arquivo!", "Arquivo já processado", JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
+                history.save();
+            } catch(IOException ioe){
+                JOptionPane.showMessageDialog(null, "Erro na manipulação do arquivo de histórico!"
+                        + "\n Repita a operação ou consulte a assistência técnica!", "Erro", JOptionPane.ERROR_MESSAGE);
+                    return;
+            }    
+            nameFile.setText(dbfName);
+            b1.setEnabled(true);
         }
     }//GEN-LAST:event_selectActionPerformed
 
